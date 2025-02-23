@@ -33,6 +33,17 @@ namespace drz.PdfVpMod.PdfSharp
         #region INIT
 
         /// <summary>
+        /// Авто конструктор для PlotSPDS <see cref="PdfManager"/> class.
+        /// </summary>
+        public PdfManager(Setting sets)
+        {
+            Logger =new List<ILogger>();
+            _sets = sets;
+        }
+
+
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="PdfManager" /> class.
         /// </summary>
         /// <param name="logger">The logger.</param>

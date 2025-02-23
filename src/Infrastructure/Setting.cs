@@ -33,6 +33,9 @@ namespace drz.PdfVpMod.Infrastructure
     [Serializable]
     public class Setting
     {
+        /// <summary>
+        /// The unit default Millimeter
+        /// </summary>
         WinGraphicsUnit _unit = WinGraphicsUnit.Millimeter;
 
         /// <summary>
@@ -69,7 +72,7 @@ namespace drz.PdfVpMod.Infrastructure
         }
 
         /// <summary>
-        /// Режим default
+        /// Режим default Add
         /// </summary>
         ModeChangVp _mode = ModeChangVp.Add;
 

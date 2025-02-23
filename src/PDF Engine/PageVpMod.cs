@@ -32,9 +32,18 @@ namespace drz.PdfVpMod.PdfSharp
     /// <summary>
     /// Добавляет удаляет VP с масштабом вида
     /// </summary>
-    internal class PageVpMod
+    public class PageVpMod
     {
         List<ILogger> Logger;
+
+        /// <summary>
+        /// Перегрузка для PlotSPDS <see cref="PageVpMod"/> class.
+        /// </summary>
+        public PageVpMod()
+        {
+            Logger= new List<ILogger>( );
+        }
+
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PageVpMod"/> class.
@@ -54,7 +63,7 @@ namespace drz.PdfVpMod.PdfSharp
         /// <param name="convertUnit">The convert unit.</param>
         /// <param name="isMod">true - Add or Modify<br>false - only Add</br> </param>           
         public bool PageVpModAdd(PdfPage page,
-                         int _pageNum,
+                         int _pageNum=1,
                         XGraphicsUnit convertUnit = XGraphicsUnit.Millimeter,
                         bool isMod = false)
         {
